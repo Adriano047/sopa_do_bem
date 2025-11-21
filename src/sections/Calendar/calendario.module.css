@@ -1,0 +1,23 @@
+.corpo{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eefbe8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 100%;
+}
+.texto{
+    color: #1D3557;
+}
+.imagens {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.imagens img{
+    width: 300px;
+    height: 300px;
+    border-radius: 18px;
+}

@@ -1,0 +1,102 @@
+* {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.secaoFundadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secaoFundadores h1 {
+    color: #1D3557;
+
+}
+
+.containerCarrossel {
+    width: 40%;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    /* Centraliza horizontalmente */
+    padding-bottom: 2.5%;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card .cabecalhoCard {
+    border-radius: 10px;
+    padding-bottom: 2%;
+
+    padding-top: 2.5%;
+    background-color: #E63946;
+    width: 100%;
+}
+
+.card .imagemLocal {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card p {
+    width: 80%;
+    color: #333333;
+}
+
+.card button {
+    cursor: pointer;
+    background-color: #E63946;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.card button img {
+    display: none;
+
+}
+
+/* ===========================
+   CELULAR ATÉ 576px
+   =========================== */
+@media (max-width: 576px) {
+
+    .containerCarrossel {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .card {
+        max-width: 90%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card .imagemLocal {
+        max-width: 120px;
+    }
+
+    .card p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .secaoFundadores h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
