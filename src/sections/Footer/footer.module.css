@@ -2,12 +2,23 @@
     background: #e3434a;
     font-family: Arial, Helvetica, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
+/* ------- DESKTOP -------- */
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    background: #e3434a;
+    padding: 20px 0;
+    border-bottom: white 1px solid;
+}
+
 .cabecalho img {
     height: 200px;
-    width: 100px;
+    width: 120px;
 }
 
 .cabecalho h3 {
@@ -16,70 +27,100 @@ a{
     padding-left: 20px;
 }
 
-.cabecalho {
-    display: flex;
-    justify-content: space-around;
-    background: #e3434a;
-}
-
-.linha {
-    width: 100%;
-    border: 1px solid #fff;
-}
-
 .fim {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 25px 10px;
+}
+
+.fim>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logos {
     height: 50px;
     width: 50px;
-    margin: 50px 50px;
+    margin: 20px;
 }
-.logos:nth-child(1){
+
+.logos:nth-child(1) {
     height: 40px;
     width: 40px;
-    /* margin-top: px; */
 }
+
 .fim h4 {
-    color: white
+    color: white;
 }
 
 .voltarTopo {
     color: white;
-    text-decoration: none;
 }
-@media (max-width: 468px) {
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    .cabecalho h3 {
+        display: none;
+    }
+
     .cabecalho {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 10px;
+        padding-top: 0px;
+        height: 280px;
+        border-bottom: none
     }
+
     .cabecalho img {
-        width: 75px;
-        height: 150px;
+        width: 130px;
+        height: auto;
     }
-    .fim {
-        flex-direction: column;
-    }
-    h3{
+
+    .rodape::after {
         display: none;
     }
-    .fim h4 {
-        font-size: 0.75rem;
+
+    .fim {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0px;
+        gap: 10px;
     }
+
+    .fim::before {
+        content: "";
+        display: block;
+        width: 85%;
+        height: 1px;
+        background-color: #fff;
+        margin-bottom: 12px;
+    }
+
+    .fim>div:first-child {
+        order: -1;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
     .logos {
-        height: 20px;
-        width: 20px;
-        margin: 10px 20px;
+        width: 32px;
+        height: 32px;
+        margin: 0;
     }
-    .logos:nth-child(1){
-        height: 20px;
-        width: 20px;
-        margin-top: 52px;
+
+    .fim>div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
-    .voltarTopo {
-        display: inline-block;
+
+    .fim h4 {
+        font-size: 0.8rem;
     }
 }

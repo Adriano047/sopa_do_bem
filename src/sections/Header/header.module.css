@@ -1,18 +1,16 @@
-
 :global(*) {
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .navbar {
     display: flex;
-    justify-content: center; /* centraliza o menu */
+    justify-content: center;
     align-items: center;
     background: #E63946;
     height: 130px;
-    padding: 0 20px; /* espaçamento lateral */
+    padding: 0 20px;
 }
 
 .menu {
@@ -20,8 +18,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* evita ultrapassar a tela */
-    gap: 20px;
+    max-width: 1200px;
 }
 
 .logo {
@@ -29,24 +26,22 @@
     height: auto;
 }
 
-
-.nav-links {
+.nav {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links li a {
+.nav li a {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
     transition: filter 0.2s;
 }
 
-.nav-links li a:hover {
+.nav li a:hover {
     filter: brightness(0.8);
 }
-
 
 .botao {
     height: 50px;
@@ -68,21 +63,80 @@
 }
 
 .imgfundo {
-    background-color: #f5f5f5;
     background-image: url("../../assets/imageFundo.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     align-items: center;
-    
 }
-
 
 .logoPrincipal {
     height: 50%;
-    width: auto;
     margin-left: 10%;
-    
+}
+
+/* menu-burguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 22px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Animação de X */
+.x1 {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.x2 {
+    opacity: 0;
+}
+
+.x3 {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .botao {
+        display: none;
+    }
+
+    /* Menu vira dropdown */
+    .nav {
+        position: absolute;
+        top: 130px;
+        left: 0;
+        width: 100%;
+        background: #E63946;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav li {
+        padding: 15px 0;
+    }
 }

@@ -1,57 +1,54 @@
-* {
-    font-family: 'Instrument Sans', sans-serif;
-}
-
 .secaoFundadores {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.secaoFundadores h1 {
-    color: #1D3557;
-
+    width: 100%;
 }
 
 .containerCarrossel {
-    width: 40%;
+    width: 45%;
+    min-width: 300px;
+}
+
+.containerCard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .card {
     display: flex;
-    background-color: white;
-    align-items: center;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    background: white;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px auto 50px auto;
     max-width: 400px;
-    gap: 30px;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    /* Centraliza horizontalmente */
-    padding-bottom: 2.5%;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 10px 15px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.card .cabecalhoCard {
-    border-radius: 10px;
-    padding-bottom: 2%;
-
-    padding-top: 2.5%;
+.cabecalhoCard {
+    width: 100%;
     background-color: #E63946;
-    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.card .imagemLocal {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+.imagemLocal {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
 .card p {
-    width: 80%;
+    width: 88%;
     color: #333333;
 }
 
@@ -60,43 +57,66 @@
     background-color: #E63946;
     color: white;
     border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
     border: none;
-    padding: 10px;
-    text-align: center;
 }
 
 .card button img {
     display: none;
-
 }
 
-/* ===========================
-   CELULAR ATÉ 576px
-   =========================== */
+/* RESPONSIVIDADE */
+
+/* --- CELULARES ATÉ 576px --- */
 @media (max-width: 576px) {
 
     .containerCarrossel {
         width: 100%;
-        padding: 0 10px;
+        padding: 10px;
     }
 
     .card {
-        max-width: 90%;
+        max-width: 95%;
         padding: 20px;
-        gap: 20px;
+        gap: 16px;
     }
 
-    .card .imagemLocal {
-        max-width: 120px;
+    .imagemLocal {
+        width: 120px;
+        height: 120px;
     }
 
     .card p {
-        width: 100%;
-        font-size: 14px;
+        font-size: 0.95rem;
+        width: 95%;
     }
 
     .secaoFundadores h1 {
-        font-size: 24px;
-        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    :global(#Fundadores .swiper-button-next),
+    :global(#Fundadores .swiper-button-prev) {
+        display: none;
+    }
+}
+
+/* --- TABLET 577px — 900px --- */
+@media (min-width: 577px) and (max-width: 900px) {
+
+    .containerCarrossel {
+        width: 70%;
+    }
+
+    .card {
+        max-width: 450px;
+    }
+}
+
+/* --- TELAS GRANDES --- */
+@media (min-width: 900px) {
+    .containerCarrossel {
+        width: 40%;
     }
 }
