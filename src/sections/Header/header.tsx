@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./header.module.css";
+import logo from "../../assets/logo.png"
+import logoMaior from "../../assets/logo.sopa.png"
 
 export function Header() {
     const [open, setOpen] = useState(false);
@@ -9,7 +11,7 @@ export function Header() {
             <nav className={styles.navbar}>
                 <div className={styles.menu}>
 
-                    <img className={styles.logo} src="src/assets/logo.png" alt="Logo" />
+                    <img className={styles.logo} src={logo} alt="Logo" />
 
                     <ul className={`${styles.nav} ${open ? styles.open : ""}`}>
                         <li><a href="#Fundadores">Fundadores</a></li>
@@ -35,7 +37,7 @@ export function Header() {
             </nav>
 
             <div className={styles.imgfundo}>
-                <img className={styles.logoPrincipal} src="src/assets/logo.sopa.png" alt="" />
+                <img className={styles.logoPrincipal} src={logoMaior} alt="" />
             </div>
         </header>
     );

@@ -1,5 +1,5 @@
 import styles from './prestacao.module.css'
-
+import logoPaloma from '../../assets/logo.posto.png'
 export function Prestacao() {
     return (
         <div id="Parcerias" className={styles.container}>
@@ -20,9 +20,9 @@ export function Prestacao() {
                 <h1 className={styles.titulo}>Parcerias</h1>
 
                 <div className={styles.logoGrid}>
-                    <img className={styles.img} src="src/assets/logo.posto.png" alt="" />
-                    <img className={styles.img} src="src/assets/logo.posto.png" alt="" />
-                    <img className={styles.img} src="src/assets/logo.posto.png" alt="" />
+                    <img className={styles.img} src={logoPaloma} alt="" />
+                    <img className={styles.img} src={logoPaloma} alt="" />
+                    <img className={styles.img} src={logoPaloma} alt="" />
                 </div>
             </div>
         </div>
