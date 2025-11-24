@@ -8,7 +8,24 @@
 .carrossel h1 {
     margin-bottom: 50px;
 }
+/* overlay do vídeo */
+.videoOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
 
+.videoOverlay:hover {
+    background: rgba(0, 0, 0, 0.45);
+}
 /* ------ SWIPER (GLOBAL) ------ */
 :global(#Galeria .swiper) {
     max-width: 850px;
