@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import styles from "./galeria.module.css";
@@ -13,6 +14,9 @@ export function Galeria() {
     { tipo: "imagem", src: "https://rounder.pics/assets/img/ui/square-image.webp", descricao: "Imagem 1" },
   ];
 
+  // controla qual vídeo foi ativado
+  const [ativo, setAtivo] = useState<number | null>(null);
+
   return (
     <div id="Galeria" className={styles.carrossel}>
       <h1>Nós fazemos a diferença</h1>
@@ -25,28 +29,44 @@ export function Galeria() {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-        // autoplay={{ delay: 3500, disableOnInteraction: false }}
         >
           {slides.map((item, i) => (
             <SwiperSlide key={i}>
               {item.tipo === "video" ? (
                 <div className={styles.videoContainer}>
+                  
+                  {/* overlay — some quando o vídeo for ativado */}
+                  {ativo !== i && (
+                    <div
+                      className={styles.videoOverlay}
+                      onClick={() => setAtivo(i)}
+                    >
+                      ▶
+                    </div>
+                  )}
+
                   <iframe
                     src={item.src}
                     title={item.descricao}
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
+                    style={{
+                      pointerEvents: ativo === i ? "auto" : "none",
+                    }}
                   ></iframe>
                 </div>
               ) : (
-                <img src={item.src} alt={item.descricao} className={styles.imagemSlide} />
+                <img
+                  src={item.src}
+                  alt={item.descricao}
+                  className={styles.imagemSlide}
+                />
               )}
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
     </div>
-
   );
 }
