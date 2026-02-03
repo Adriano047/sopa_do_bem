@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./header.module.css";
-import logo from "../../assets/logo.png"
-import logoMaior from "../../assets/logo.sopa.png"
+import logo from "../../assets/logo-sopa.svg"
 
 export function Header() {
     const [open, setOpen] = useState(false);
@@ -37,7 +36,7 @@ export function Header() {
             </nav>
 
             <div className={styles.imgfundo}>
-                <img className={styles.logoPrincipal} src={logoMaior} alt="" />
+                <img className={styles.logoPrincipal} src={logo} alt="" />
             </div>
         </header>
     );
