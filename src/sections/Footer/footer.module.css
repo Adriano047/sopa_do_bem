@@ -5,26 +5,56 @@
 
 a {
     text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none
 }
 
 /* ------- DESKTOP -------- */
 .cabecalho {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     background: #e3434a;
-    padding: 20px 0;
+    padding: 56px 36px;
     border-bottom: white 1px solid;
 }
 
-.cabecalho img {
-    height: 200px;
-    width: 120px;
+.cabecalho h4 {
+    color: white;
 }
 
-.cabecalho h3 {
+.cabecalho img {
+    height: auto;
+    width: 140px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.links ul {
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
     color: white;
-    margin-top: 70px;
-    padding-left: 20px;
+    text-decoration: none;
 }
 
 .fim {
@@ -34,56 +64,47 @@ a {
     padding: 25px 10px;
 }
 
-.fim>div:first-child {
+.fim {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.logos {
-    height: 50px;
-    width: 50px;
-    margin: 20px;
-}
+.fim p {
+    font-size: smaller;
 
-.logos:nth-child(1) {
-    height: 40px;
-    width: 40px;
-}
-
-.fim h4 {
-    color: white;
-}
-
-.voltarTopo {
-    color: white;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
-    .cabecalho h3 {
-        display: none;
-    }
-
     .cabecalho {
         flex-direction: column;
+        border-bottom: none;
         align-items: center;
-        padding-bottom: 10px;
-        padding-top: 0px;
-        height: 280px;
-        border-bottom: none
+        gap: 25px;
     }
 
-    .cabecalho img {
-        width: 130px;
-        height: auto;
+    .cabecalho h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 25px;
     }
 
     .rodape::after {
         display: none;
     }
 
+    .links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 20px;
+    }
+.links h4, .links a{
+ font-size: 1.2rem;
+}
     .fim {
         flex-direction: column;
         align-items: center;
@@ -100,27 +121,4 @@ a {
         margin-bottom: 12px;
     }
 
-    .fim>div:first-child {
-        order: -1;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .logos {
-        width: 32px;
-        height: 32px;
-        margin: 0;
-    }
-
-    .fim>div:last-child {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .fim h4 {
-        font-size: 0.8rem;
-    }
 }

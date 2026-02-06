@@ -1,7 +1,8 @@
 import style from './footer.module.css'
-import logoFace from '../../assets/logoFacebk.png'
-import logoInsta from '../../assets/instagram.png'
-import logoWpp from '../../assets/whatsapp.png'
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { LiaLongArrowAltUpSolid } from "react-icons/lia";
 import logoSopadoBem from '../../assets/logo-sopa.svg'
 
 export function Footer() {
@@ -9,24 +10,36 @@ export function Footer() {
         <footer className={style.rodape}>
             <div className={style.cabecalho}>
                 <img src={logoSopadoBem} alt="logoSopadoBem" />
-                <a href="#"><h3>Introdução</h3></a>
-                <a href="#Fundadores"><h3>Fundadores</h3></a>
-                <a href="#Galeria"><h3>Galeria</h3></a>
-                <a href="#Donate"><h3>Doações</h3></a>
-                <a href="#Calendario"><h3>Calendario</h3></a>
-                <a href="#Entrega"><h3>Pontos</h3></a>
+                <div className={style.links}>
+                    <div className={style.navegacao}>
+                        <h4>Navegacao</h4>
+                        <ul>
+                            <li><a href="#">Introdução</a></li>
+                            <li><a href="#Fundadores">Fundadores</a></li>
+                            <li><a href="#Galeria">Galeria</a></li>
+                            <li><a href="#Donate">Doações</a></li>
+                            <li><a href="#Calendario">Calendario</a></li>
+                            <li><a href="#Entrega">Pontos</a></li>
+                        </ul>
+                    </div>
+                    <div className={style.contato}>
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="#"><IoLogoWhatsapp size={20}/>Whatsapp</a></li>
+                            <li><a href="#"><FaMapMarkerAlt size={20}/>Endereço</a></li>
+                        </ul>
+                    </div>
+                    <div className={style.rede}>
+                        <h4>Redes e Plataformas</h4>
+                        <ul>
+                            <li><a href="#"><FaInstagramSquare size={20}/>Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className={style.fim}>
-                <div>
-                    <img className={style.logos} src={logoFace} alt="logo facebook" />
-                    <img className={style.logos} src={logoInsta} alt="logo instagram" />
-                    <img className={style.logos} src={logoWpp} alt="logo whatsapp" />
-                </div>
-                <div>
-
-                    <h4>Todos os direitos reservados © 2025 | POLÍTICA DE PRIVACIDADE</h4>
-                    <a href="#" className={style.voltarTopo}><h4>VOLTAR AO TOPO ↑</h4></a>
-                </div>
+                    <p>Todos os direitos reservados © 2025 | POLÍTICA DE PRIVACIDADE</p>
+                    <a href="#"><p>Voltar Ao Topo <LiaLongArrowAltUpSolid size={25} /></p></a>
             </div>
         </footer>
     );
