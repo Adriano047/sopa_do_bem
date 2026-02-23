@@ -36,8 +36,6 @@
     width: 300px;
     text-align: center;
     color: white;
-    display: flex;
-    flex-direction: column;
 }
 
 .card img {

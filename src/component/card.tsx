@@ -1,5 +1,5 @@
+import type { ReactNode } from "react"
 import Botao from "./button"
-import IconeDeMapa from "../assets/MapPin.svg"
 type CardProps = {
   imagemLocal: string
   nome: string
@@ -7,9 +7,10 @@ type CardProps = {
   estiloCard: any
   textoBotao: string
   link?: string
+  icone?: ReactNode
 }
 
-export default function Card({ estiloCard, imagemLocal, nome, textoCard, textoBotao, link }: CardProps) {
+export default function Card({ estiloCard, imagemLocal, nome, textoCard, textoBotao, link,icone }: CardProps) {
   return (
     <div className={estiloCard?.card || ""}>
       <div className={estiloCard?.cabecalhoCard || ""}>
@@ -17,7 +18,7 @@ export default function Card({ estiloCard, imagemLocal, nome, textoCard, textoBo
       </div>
       <h2>{nome}</h2>
       <p>{textoCard}</p>
-      <Botao texto={textoBotao} icone={IconeDeMapa} link={link} />
+      <Botao texto={textoBotao} icone={icone} link={link} />
     </div>
   )
 }

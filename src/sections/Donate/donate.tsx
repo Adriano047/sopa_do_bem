@@ -1,7 +1,7 @@
 import styles from './donate.module.css'
-import Gift from '../../assets/Gift.svg'
-import Chat from '../../assets/Chat.svg'
-import Volunteering from '../../assets/Volunteering.svg'
+import { IoIosGift } from "react-icons/io";
+import { PiChatCircleDotsFill } from "react-icons/pi";
+import { VscHeartFilled } from "react-icons/vsc";
 
 export function Donate() {
     return (
@@ -14,7 +14,7 @@ export function Donate() {
             <section className={styles.cards}>
 
                 <div className={styles.card}>
-                    <img src={Volunteering} alt="Voluntarie-se" />
+                    <VscHeartFilled size={60} className={styles.gifs}/>
                     <h3>Voluntarie-se</h3>
                     <p className={styles.texto}>
                         Junte-se à nossa equipe de voluntários dedicados e ajude a fazer a diferença na sua comunidade.
@@ -23,7 +23,8 @@ export function Donate() {
                 </div>
 
                 <div className={styles.card}>
-                    <img src={Gift} alt="Doações" />
+                    <IoIosGift size={60} className={styles.gifs}/>
+
                     <h3>Doações</h3>
                     <p className={styles.texto}>
                         Suas generosas doações nos ajudam a fornecer refeições e apoio aos necessitados.
@@ -32,7 +33,7 @@ export function Donate() {
                 </div>
 
                 <div className={styles.card}>
-                    <img src={Chat} alt="Divulgue" />
+                    <PiChatCircleDotsFill size={60}/>
                     <h3>Divulgue</h3>
                     <p className={styles.texto}>
                         Ajude-nos a alcançar mais pessoas compartilhando nossa missão com sua rede.

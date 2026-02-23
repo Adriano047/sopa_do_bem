@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     background: #E63946;
-    height: 130px;
+    height: 96px;
     padding: 0 20px;
 }
 
@@ -17,6 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
@@ -113,12 +115,15 @@
     .navbar {
         height: 80px;
     }
+
     .logo {
-    width: 60px;
-    height: auto;
-}
+        width: 60px;
+        height: auto;
+    }
+
     .hamburger {
         display: flex;
+        align-items: center
     }
 
     .botao {
@@ -136,6 +141,8 @@
         text-align: center;
         padding: 20px 0;
         display: none;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav.open {
@@ -143,6 +150,12 @@
     }
 
     .nav li {
-        padding: 15px 0;
+        padding: 10px 0;
+        width: fit-content;
+        ;
+    }
+
+    .logoPrincipal {
+        display: none;
     }
 }
