@@ -16,7 +16,7 @@ function App() {
       <div className='containerPrincipal'>
         <Header />
         <Introducao />
-        <Fundadores />
+        {/* <Fundadores /> */}
         <Galeria />
         <Donate />
         <Calendario />

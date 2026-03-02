@@ -1,5 +1,6 @@
 import styles from "./introducao.module.css"
-import sopaImagem from "../../assets/sopa-home.png"
+import sopaImagem1 from "../../assets/comunitaria.jpg"
+import sopaImagem2 from "../../assets/Entregando.jpg"
 export function Introducao() {
     return (
         <div className={styles.container}>
@@ -11,10 +12,14 @@ export function Introducao() {
                         Começamos de forma simples, com um pequeno caldeirão de sopa que servia cerca de 50 pessoas por mês.
                         Hoje, somos mais de 40 membros engajados</p>
                 </div>
-                <img className={styles.imagem1} src={sopaImagem} alt="" />
+                <div className={styles.containerImg} >
+                    <img className={styles.imagem1} src={sopaImagem1} alt="" />
+                </div>
             </div>
             <div className={styles.titulo2}>
-                <img className={styles.imagem2} src={sopaImagem} alt="" />
+                <div className={styles.containerImg} >
+                    <img className={styles.imagem2} src={sopaImagem2} alt="" />
+                </div>
                 <div className={styles.t2}>
                     <h1>Nossa Missão</h1>
                     <p>Promover a cidadania e enfrentar as

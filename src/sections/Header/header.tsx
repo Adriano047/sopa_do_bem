@@ -36,7 +36,7 @@ export function Header() {
             </nav>
 
             <div className={styles.imgfundo}>
-                <img className={styles.logoPrincipal} src={logo} alt="" />
+                {/* <img className={styles.logoPrincipal} src={logo} alt="" /> */}
             </div>
         </header>
     );
