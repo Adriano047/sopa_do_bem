@@ -74,8 +74,10 @@
 .imagemSlide {
     width: 100%;
     max-width: 650px;
+    height: 400px;
     border-radius: 10px;
     object-fit: cover;
+    object-position: top;
 }
 
 /* ------ MOBILE ------ */
