@@ -1,7 +1,7 @@
 import './App.css'
 import { Header } from './sections/Header/header.tsx'
 import { Introducao } from './sections/Introduction/introducao.tsx'
-import { Fundadores } from './sections/Founders/fundadores.tsx'
+// import { Fundadores } from './sections/Founders/fundadores.tsx'
 import { Galeria } from "./sections/Gallery/galeria.tsx"
 import { Donate } from './sections/Donate/donate.tsx'
 import { Calendario } from './sections/Calendar/calendario.tsx'
